@@ -1,6 +1,5 @@
 const checkString = (string, length) => string.length <= length;
-
-console.log (checkString ('провер', 10));
+checkString ('проверяемая строка', 20);
 
 
 const checkPalindrom = (string) => {
@@ -12,8 +11,7 @@ const checkPalindrom = (string) => {
   const reverseString = normalizeString.split('').reverse().join('');
   return normalizeString === reverseString;
 };
-
-console.log (checkPalindrom ('топо'));
+checkPalindrom ('топот');
 
 const returnsNumbers = (string) => {
   if (typeof string === 'number') {
@@ -25,7 +23,8 @@ const returnsNumbers = (string) => {
       result += string.at(i);
     }
   }
-  return parseInt (result, 10);
+  return parseInt(result, 10);
 };
 
-console.log (returnsNumbers ('2023 год'));
+
+returnsNumbers ('2023 год');
