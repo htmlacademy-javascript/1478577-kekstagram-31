@@ -1,8 +1,6 @@
- const checkString = (string, length) => {
-  return string.length <= length;
- }
+const checkString = (string, length) => string.length <= length;
 
- console.log (checkString ('провер', 10));
+console.log (checkString ('провер', 10));
 
 
 const checkPalindrom = (string) => {
@@ -10,24 +8,24 @@ const checkPalindrom = (string) => {
     return false;
   }
 
-  const normalizeString = string.replaceAll(" ", "").toUpperCase();
-  const reverseString = normalizeString.split("").reverse().join("");
+  const normalizeString = string.replaceAll(' ', '').toUpperCase();
+  const reverseString = normalizeString.split('').reverse().join('');
   return normalizeString === reverseString;
-}
+};
 
 console.log (checkPalindrom ('топо'));
 
 const returnsNumbers = (string) => {
-  if (typeof string === "number") {
+  if (typeof string === 'number') {
     return string;
   }
-  let result = "";
+  let result = '';
   for (let i = 0; i < string.length; i++) {
     if (!Number.isNaN(parseInt(string.at(i), 10))) {
-      result+=string.at(i);
+      result += string.at(i);
     }
   }
   return parseInt (result, 10);
-}
+};
 
 console.log (returnsNumbers ('2023 год'));
