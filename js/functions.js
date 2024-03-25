@@ -1,3 +1,4 @@
+
 const checkString = (string, length) => string.length <= length;
 checkString ('проверяемая строка', 20);
 
