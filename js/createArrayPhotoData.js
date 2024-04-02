@@ -12,6 +12,7 @@ import {
   getIndentifier,
   indentifier,
 } from './utill.js';
+
 //Функция создающая объект комментария
 
 const creatDataComment = () => ({
