@@ -5,4 +5,4 @@ import {
 
 import {
   renderThumbnails
-} from './miniatures.js';
+} from './thumbnails.js';
