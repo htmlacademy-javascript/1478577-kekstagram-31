@@ -6,3 +6,10 @@ import {
 import {
   renderThumbnails
 } from './thumbnails.js';
+
+import './windowRendering.js';
+
+const imageClickHadler = (dataphoto) =>{
+  console.log(dataphoto);
+};
+renderThumbnails(photosData, imageClickHadler);
