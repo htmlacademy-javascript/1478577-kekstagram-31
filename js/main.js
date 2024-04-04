@@ -7,9 +7,11 @@ import {
   renderThumbnails
 } from './thumbnails.js';
 
-import './windowRendering.js';
+import {
+  openPhoto
+} from './windowRendering.js';
 
-const imageClickHadler = (dataphoto) =>{
-  console.log(dataphoto);
+const imageClickHadler = (dataPhoto) =>{
+  openPhoto(dataPhoto);
 };
 renderThumbnails(photosData, imageClickHadler);

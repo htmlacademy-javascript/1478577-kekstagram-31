@@ -3,9 +3,29 @@ import {
 } from './createArrayPhotoData.js';
 
 //Нужно чтобы окно открывалось при нажатии на миниматюру данные берём из photosData;
-const bigPicture = document.querySelector('.big-picture');
-const thumbnail = document.querySelectorAll('.picture__img');
-const smallPicture = document.querySelectorAll('.picture');
+const body = document.querySelector('body');
+const bigPictureContainer = document.querySelector('.big-picture');
+const bigPictureImage = document.querySelector('.big-picture__img img');
+const bigPictureClose = document.querySelector('.big-picture__cancel');
+
+
+//функции открытия и закрытия большого изображения
+const openPhoto = (dataPhoto) => {
+  bigPictureContainer.classList.remove('hidden');
+  bigPictureImage.src = dataPhoto.url;
+
+  body.classList.add('.modal-open');
+};
+
+const closePhoto = () => {
+  bigPictureContainer.classList.add('hidden');
+
+  body.classList.remove('.modal-open');
+};
+
+bigPictureClose.addEventListener('click', closePhoto);
+
+export {openPhoto};
 
 // // Функция добавленя клика
 // const addClick = (photo) =>{
