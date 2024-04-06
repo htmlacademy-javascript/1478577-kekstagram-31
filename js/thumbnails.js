@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import {
   photosData
 } from './createArrayPhotoData.js';
@@ -16,6 +17,7 @@ const creatThumbnail = ({
   likes
 }, imageClickHadler) => {
   const thumbnail = template.cloneNode(true);
+
   const image = thumbnail.querySelector('.picture__img');
   image.src = url;
   image.alt = description;
