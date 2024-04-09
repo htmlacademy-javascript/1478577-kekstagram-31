@@ -6,6 +6,7 @@ const MIN_LIKES = 15;
 const MAX_COMMENT = 30;
 const MAX_PHOTO = 25;
 const ID = [];
+const COMMENT_STEP = 5;
 export {
   COMMENTS,
   NAMES,
@@ -13,5 +14,6 @@ export {
   MIN_LIKES,
   MAX_COMMENT,
   MAX_PHOTO,
-  ID
+  ID,
+  COMMENT_STEP
 };
