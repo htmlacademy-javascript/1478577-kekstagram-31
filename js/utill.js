@@ -2,6 +2,7 @@ import {
   MAX_PHOTO,
   ID
 } from './data.js';
+
 let indentifier;
 //Функция для нахождения случайного числа в заданном интервале.
 
@@ -28,9 +29,10 @@ const getIndentifier = () => {
 //Функция, вытаскивающая элемент из массива.
 
 const getElement = (array) => array[getRandomInteger(0, array.length - 1)];
+
 export {
   getIndentifier,
   getRandomInteger,
   getElement,
-  indentifier
+  indentifier,
 };
