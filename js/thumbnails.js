@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import {
   photosData
 } from './createArrayPhotoData.js';
@@ -9,29 +10,42 @@ const template = document.querySelector('#picture').content.querySelector('.pict
 
 //Создаём функцию для создания миниатюр
 
-const creatThumbnail = (photo) => {
+const creatThumbnail = ({
+  url,
+  description,
+  comments,
+  likes
+}, imageClickHadler) => {
   const thumbnail = template.cloneNode(true);
+
   const image = thumbnail.querySelector('.picture__img');
-  image.src = photo.url;
-  image.alt = photo.description;
-  thumbnail.querySelector('.picture__comments').textContent = photo.comments.length;
-  thumbnail.querySelector('.picture__likes').textContent = photo.likes;
+  image.src = url;
+  image.alt = description;
+  thumbnail.querySelector('.picture__comments').textContent = comments.length;
+  thumbnail.querySelector('.picture__likes').textContent = likes;
+  image.addEventListener('click', () => {
+    imageClickHadler({url, description, comments, likes});
+  });
   return thumbnail;
 };
 
 //Найдём контёнер в который нужно добавлять информацию
 const container = document.querySelector('.pictures');
 
-//Создаём фрагмент
-const fragment = document.createDocumentFragment();
 
 //Нужно пройтись по массиву и добавить информацию в шаблон
-const renderThumbnails = photosData.forEach((photo) => {
-  const thumbnail = creatThumbnail(photo);
+const renderThumbnails = (photos, imageClickHadler) => {
+  //Создаём фрагмент
+  const fragment = document.createDocumentFragment();
+  photos.forEach((photo) => {
 
-  fragment.appendChild(thumbnail);
-});
-container.appendChild(fragment);
+    const thumbnail = creatThumbnail(photo, imageClickHadler);
+
+    fragment.appendChild(thumbnail);
+  });
+  container.appendChild(fragment);
+};
+
 
 export {
   renderThumbnails
