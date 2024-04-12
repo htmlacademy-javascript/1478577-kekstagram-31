@@ -6,8 +6,6 @@ const uploadForm = document.querySelector('.img-upload__form');
 const uploadInput = uploadForm.querySelector('#upload-file');
 const photoEditorForm = uploadForm.querySelector('.img-upload__overlay');
 const cancelphotoEditorForm = uploadForm.querySelector('.img-upload__cancel');
-const hashtagsInput = uploadForm.querySelector('.text__hashtags');
-const descriptionTextarea = uploadForm.querySelector('.text__description');
 
 const onPhotoEditorResetBtnClick = () => {
   closePhotoEditor();
