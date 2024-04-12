@@ -7,6 +7,10 @@ const MAX_COMMENT = 30;
 const MAX_PHOTO = 25;
 const ID = [];
 const COMMENT_STEP = 5;
+const COMMENT_MAX_LENGTH = 140;
+const HASHTAG_MAX_LENGTH = 20;
+const HASHTAGS_MAX = 5;
+
 export {
   COMMENTS,
   NAMES,
@@ -15,5 +19,8 @@ export {
   MAX_COMMENT,
   MAX_PHOTO,
   ID,
-  COMMENT_STEP
+  COMMENT_STEP,
+  COMMENT_MAX_LENGTH,
+  HASHTAG_MAX_LENGTH,
+  HASHTAGS_MAX
 };
